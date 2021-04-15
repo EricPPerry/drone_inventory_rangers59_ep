@@ -1,0 +1,19 @@
+<!--HTML Produced By the Flask Form-->
+
+<form method="POST">
+    {{ form.hidden_tag() }} <!--SECRET KEY from config we need to have to make it a valid form-->
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ form.email.label }}
+            {{ form.email(class = 'form-control', placeholder = "Place Email Here") }} <!--Calls form function and allows us to add verbosity-->
+        </fieldset>
+
+        <fieldset id="pass-field">
+            {{ form.password.label }}
+            {{ form.password(class = 'form-control', placeholder = "Place Pasword Here") }}
+        </fieldset>
+
+        <!--Submit button-->
+        {{ form.submit_button(class = 'btn btn-primary') }}
+    </div>
+</form>
